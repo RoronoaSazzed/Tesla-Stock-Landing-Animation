@@ -14,8 +14,8 @@
       }
 
       :root {
-        --annieTime: 0.4s;
-        --carAnnieTime: 3s;
+        --annieTime: 0.3s;
+        --carAnnieTime: 2.5s;
       }
 
       .parentDiv {
@@ -485,15 +485,11 @@
 
       @keyframes carPan {
         0% {
-          transform: translate(-380px, -50px);
-        }
-
-        80% {
-          transform: translate(10px, -10px);
+          transform: scale(0.5) translate(-380px, -50px);
         }
 
         100% {
-          transform: translate(0px, 0px);
+          transform: scale(1) translate(0px, 0px);
         }
       }
 
@@ -529,6 +525,13 @@
         transform-origin: center;
         opacity: 0;
         animation: fadeIn 1s calc(var(--carAnnieTime) + 2.25s) 1 forwards;
+      }
+
+      #particles,
+      #particles2,
+      #particles3 {
+        transform-box: fill-box;
+        transform-origin: center;
       }
     </style>
   </head>
