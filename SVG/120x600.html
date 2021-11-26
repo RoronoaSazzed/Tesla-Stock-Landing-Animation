@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tesla Stock Animation</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --annieTime: 0.3s;
+        --carAnnieTime: 2.5s;
+      }
+
+      .parentDiv {
+        position: relative;
+      }
+
+      .particlesSingle,
+      .particlesSingle_2,
+      .particlesSingle_3 {
+        transform-box: fill-box;
+        transform-origin: center;
+        opacity: 0;
+        animation: goTocenter calc(var(--annieTime) * 3) linear infinite
+          forwards;
+        pointer-events: none;
+      }
+
+      @keyframes goTocenter {
+        20% {
+          opacity: 1;
+        }
+
+        60% {
+          opacity: 1;
+        }
+
+        100% {
+          opacity: 0;
+          transform: translate(57px, 316px);
+        }
+      }
+
+      .particlesSingle_2 {
+        animation-delay: calc(var(--annieTime) * 2);
+      }
+
+      .particlesSingle_3 {
+        animation-delay: calc(var(--annieTime) * 1);
+      }
+
+      #p-1,
+      #p-1_2,
+      #p-1_3 {
+        transform: translate(300px, 336px);
+      }
+
+      #p-2,
+      #p-2_2,
+      #p-2_3 {
+        transform: translate(202px, 187px);
+      }
+
+      #p-3,
+      #p-3_2,
+      #p-3_3 {
+        transform: translate(51px, 224px);
+      }
+      #p-4,
+      #p-4_2,
+      #p-4_3 {
+        transform: translate(49px, 187px);
+      }
+      #p-5,
+      #p-5_2,
+      #p-5_3 {
+        transform: translate(52px, 284px);
+      }
+      #p-6,
+      #p-6_2,
+      #p-6_3 {
+        transform: translate(57px, 308px);
+      }
+      #p-7,
+      #p-7_2,
+      #p-7_3 {
+        transform: translate(61px, 299px);
+      }
+      #p-8,
+      #p-8_2,
+      #p-8_3 {
+        transform: translate(44px, 96px);
+      }
+      #p-9,
+      #p-9_2,
+      #p-9_3 {
+        transform: translate(52px, 248px);
+      }
+      #p-10,
+      #p-10_2,
+      #p-10_3 {
+        transform: translate(175px, 196px);
+      }
+
+      #p-11,
+      #p-11_2,
+      #p-11_3 {
+        transform: translate(259px, 141px);
+      }
+      #p-12,
+      #p-12_2,
+      #p-12_3 {
+        transform: translate(113px, 261px);
+      }
+      #p-13,
+      #p-13_2,
+      #p-13_3 {
+        transform: translate(78px, 293px);
+      }
+
+      #p-14,
+      #p-14_2,
+      #p-14_3 {
+        transform: translate(51px, 297px);
+      }
+      #p-15,
+      #p-15_2,
+      #p-15_3 {
+        transform: translate(167px, 239px);
+      }
+
+      #p-16,
+      #p-16_2,
+      #p-16_3 {
+        transform: translate(123px, 238px);
+      }
+      #p-17,
+      #p-17_2,
+      #p-17_3 {
+        transform: translate(26px, 249px);
+      }
+      #p-18,
+      #p-18_2,
+      #p-18_3 {
+        transform: translate(44px, 284px);
+      }
+      #p-19,
+      #p-19_2,
+      #p-19_3 {
+        transform: translate(145px, 200px);
+      }
+      #p-20,
+      #p-20_2,
+      #p-20_3 {
+        transform: translate(83px, 217px);
+      }
+      #p-21,
+      #p-21_2,
+      #p-21_3 {
+        transform: translate(295px, 183px);
+      }
+      #p-22,
+      #p-22_2,
+      #p-22_3 {
+        transform: translate(302px, 107px);
+      }
+      #p-23,
+      #p-23_2,
+      #p-23_3 {
+        transform: translate(78px, 235px);
+      }
+      #p-24,
+      #p-24_2,
+      #p-24_3 {
+        transform: translate(61px, 291px);
+      }
+      #p-25,
+      #p-25_2,
+      #p-25_3 {
+        transform: translate(64px, 278px);
+      }
+      #p-26,
+      #p-26_2,
+      #p-26_3 {
+        transform: translate(87px, 167px);
+      }
+      #p-27,
+      #p-27_2,
+      #p-27_3 {
+        transform: translate(145px, 71px);
+      }
+
+      #p-28,
+      #p-28_2,
+      #p-28_3 {
+        transform: translate(115px, 150px);
+      }
+      #p-29,
+      #p-29_2,
+      #p-29_3 {
+        transform: translate(182px, 360px);
+      }
+      #p-30,
+      #p-30_2,
+      #p-30_3 {
+        transform: translate(48px, 382px);
+      }
+      #p-31,
+      #p-31_2,
+      #p-31_3 {
+        transform: translate(192px, 196px);
+      }
+      #p-32,
+      #p-32_2,
+      #p-32_3 {
+        transform: translate(237px, 231px);
+      }
+      #p-33,
+      #p-33_2,
+      #p-33_3 {
+        transform: translate(146px, 341px);
+      }
+      #p-34,
+      #p-34_2,
+      #p-34_3 {
+        transform: translate(112px, 333px);
+      }
+      #p-35,
+      #p-35_2,
+      #p-35_3 {
+        transform: translate(90px, 361px);
+      }
+      #p-36,
+      #p-36_2,
+      #p-36_3 {
+        transform: translate(75px, 338px);
+      }
+      #p-37,
+      #p-37_2,
+      #p-37_3 {
+        transform: translate(122px, 337px);
+      }
+      #p-38,
+      #p-38_2,
+      #p-38_3 {
+        transform: translate(201px, 345px);
+      }
+      #p-39,
+      #p-39_2,
+      #p-39_3 {
+        transform: translate(290px, 255px);
+      }
+
+      #p-40,
+      #p-40_2,
+      #p-40_3 {
+        transform: translate(51px, 352px);
+      }
+
+      #p-41,
+      #p-41_2,
+      #p-41_3 {
+        transform: translate(265px, 463px);
+      }
+      #p-42,
+      #p-42_2,
+      #p-42_3 {
+        transform: translate(210px, 459px);
+      }
+      #p-43,
+      #p-43_2,
+      #p-43_3 {
+        transform: translate(155px, 347px);
+      }
+      #p-44,
+      #p-44_2,
+      #p-44_3 {
+        transform: translate(213px, 121px);
+      }
+      #p-45,
+      #p-45_2,
+      #p-45_3 {
+        transform: translate(99px, 196px);
+      }
+      #p-46,
+      #p-46_2,
+      #p-46_3 {
+        transform: translate(189px, 525px);
+      }
+      #p-47,
+      #p-47_2,
+      #p-47_3 {
+        transform: translate(258px, 181px);
+      }
+      #p-48,
+      #p-48_2,
+      #p-48_3 {
+        transform: translate(163px, 262px);
+      }
+      #p-49,
+      #p-49_2,
+      #p-49_3 {
+        transform: translate(175px, 209px);
+      }
+
+      #p-50,
+      #p-50_2,
+      #p-50_3 {
+        transform: translate(155px, 289px);
+      }
+      #p-51,
+      #p-51_2,
+      #p-51_3 {
+        transform: translate(129px, 282px);
+      }
+      #p-52,
+      #p-52_2,
+      #p-52_3 {
+        transform: translate(87px, 297px);
+      }
+
+      #p-53,
+      #p-53_2,
+      #p-53_3 {
+        transform: translate(296px, 158px);
+      }
+      #p-54,
+      #p-54_2,
+      #p-54_3 {
+        transform: translate(275px, 47px);
+      }
+
+      #p-55,
+      #p-55_2,
+      #p-55_3 {
+        transform: translate(184px, 153px);
+      }
+      #p-56,
+      #p-56_2,
+      #p-56_3 {
+        transform: translate(166px, 14px);
+      }
+      #p-57,
+      #p-57_2,
+      #p-57_3 {
+        transform: translate(233px, 185px);
+      }
+      #p-58,
+      #p-58_2,
+      #p-58_3 {
+        transform: translate(190px, 342px);
+      }
+      #p-59,
+      #p-59_2,
+      #p-59_3 {
+        transform: translate(164px, 413px);
+      }
+
+      #p-60,
+      #p-60_2,
+      #p-60_3 {
+        transform: translate(106px, 345px);
+      }
+      #p-61,
+      #p-61_2,
+      #p-61_3 {
+        transform: translate(79px, 322px);
+      }
+      #p-62,
+      #p-62_2,
+      #p-62_3 {
+        transform: translate(71px, 303px);
+      }
+      #p-63,
+      #p-63_2,
+      #p-63_3 {
+        transform: translate(179px, 428px);
+      }
+      #p-64,
+      #p-64_2,
+      #p-64_3 {
+        transform: translate(118px, 419px);
+      }
+      #p-65,
+      #p-65_2,
+      #p-65_3 {
+        transform: translate(120px, 446px);
+      }
+      #p-66,
+      #p-66_2,
+      #p-66_3 {
+        transform: translate(120px, 361px);
+      }
+      #p-67,
+      #p-67_2,
+      #p-67_3 {
+        transform: translate(214px, 179px);
+      }
+      #p-68,
+      #p-68_2,
+      #p-68_3 {
+        transform: translate(286px, 284px);
+      }
+      #p-69,
+      #p-69_2,
+      #p-69_3 {
+        transform: translate(229px, 353px);
+      }
+
+      #p-70,
+      #p-70_2,
+      #p-70_3 {
+        transform: translate(304px, 374px);
+      }
+      #p-71,
+      #p-71_2,
+      #p-71_3 {
+        transform: translate(273px, 347px);
+      }
+      #p-72,
+      #p-72_2,
+      #p-72_3 {
+        transform: translate(243px, 336px);
+      }
+      #p-73,
+      #p-73_2,
+      #p-73_3 {
+        transform: translate(241px, 420px);
+      }
+      #p-74,
+      #p-74_2,
+      #p-74_3 {
+        transform: translate(296px, 455px);
+      }
+      #p-75,
+      #p-75_2,
+      #p-75_3 {
+        transform: translate(259px, 399px);
+      }
+      #p-76,
+      #p-76_2,
+      #p-76_3 {
+        transform: translate(306px, 420px);
+      }
+      #p-77,
+      #p-77_2,
+      #p-77_3 {
+        transform: translate(155px, 216px);
+      }
+      #p-78,
+      #p-78_2,
+      #p-78_3 {
+        transform: translate(186px, 396px);
+      }
+      #p-79,
+      #p-79_2,
+      #p-79_3 {
+        transform: translate(26px, 347px);
+      }
+
+      #p-80,
+      #p-80_2,
+      #p-80_3 {
+        transform: translate(11px, 367px);
+      }
+      #p-81,
+      #p-81_2,
+      #p-81_3 {
+        transform: translate(52px, 256px);
+      }
+
+      #car {
+        transform-box: fill-box;
+        transform-origin: center;
+        transform: translate(-380px, -50px);
+        animation: carPan var(--carAnnieTime) ease-in-out 1 forwards;
+      }
+
+      @keyframes carPan {
+        0% {
+          transform: scale(0.5) translate(-380px, -50px);
+        }
+
+        100% {
+          transform: scale(1) translate(0px, 0px);
+        }
+      }
+
+      #stock-giveaway {
+        transform-box: fill-box;
+        transform-origin: center;
+        opacity: 0;
+        animation: fadeIn 1s var(--carAnnieTime) 1 forwards;
+      }
+
+      @keyframes fadeIn {
+        100% {
+          opacity: 1;
+        }
+      }
+
+      #claim-now {
+        transform-box: fill-box;
+        transform-origin: center;
+        opacity: 0;
+        animation: fadeIn 1s calc(var(--carAnnieTime) + 0.75s) 1 forwards;
+      }
+
+      #button-register {
+        transform-box: fill-box;
+        transform-origin: center;
+        opacity: 0;
+        animation: fadeIn 1s calc(var(--carAnnieTime) + 1.5s) 1 forwards;
+      }
+
+      #bottom-text {
+        transform-box: fill-box;
+        transform-origin: center;
+        opacity: 0;
+        animation: fadeIn 1s calc(var(--carAnnieTime) + 2.25s) 1 forwards;
+      }
+
+      #particles,
+      #particles2,
+      #particles3 {
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <a target="_blank" href="http://google.com"> </a>
+    </div>
+  </body>
+</html>
